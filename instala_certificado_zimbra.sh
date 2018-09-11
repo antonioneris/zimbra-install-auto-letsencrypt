@@ -12,8 +12,8 @@ cp -rp /opt/zimbra/ssl/zimbra /opt/zimbra/ssl/zimbra.$(date "+%Y%m%d")
 
 ####################################################################
 
-# Gen cert for
-cd /opt/letsencrypt ; ./letsencrypt-auto certonly --standalone -d xmpp.3ndigital.info -d conference.3ndigital.info -d external.3ndigital.info -d auth.3ndigital.info -d jitsi-videobridge.3ndigital.info -d focus.3ndigital.info -d turn.3ndigital.info -d mail.3ndigital.info
+# Gen cert for mail.yourdomain.com.br
+cd /opt/letsencrypt ; ./letsencrypt-auto certonly --standalone -d mail.yourdomain.com.br
 if [ "$?" -ne 0 ]; then
         echo "erro ao gerar certificado"
         exit 1
@@ -24,7 +24,7 @@ else
 
         # Install certificate
         mkdir -p /opt/zimbra/ssl/letsencrypt
-        cp /etc/letsencrypt/live/xmpp.3ndigital.info/* /opt/zimbra/ssl/letsencrypt
+        cp /etc/letsencrypt/live/mail.yourdomain.com.br/* /opt/zimbra/ssl/letsencrypt
 
         cat /etc/letsencrypt/lets.pem >> /opt/zimbra/ssl/letsencrypt/chain.pem
 
