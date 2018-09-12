@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+# Script atualizado para o zimbra 8.8.9
+# Update antonioneris@gmail.com
+#
+#
 # cd /opt ; git clone https://github.com/letsencrypt/letsencrypt
 #
 ####################################################################
